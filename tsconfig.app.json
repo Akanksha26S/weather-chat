@@ -8,12 +8,13 @@
     "skipLibCheck": true,
     "types": ["vite/client"],
 
-    // 👇👇👇 THESE ARE THE LINES THAT FIX YOUR ERRORS 👇👇👇
-    "jsx": "react-jsx", // Enables JSX processing (Fixes TS17004)
-    "moduleResolution": "bundler", // Ensures correct module lookup
-    "allowSyntheticDefaultImports": true, // Allows standard 'import React from "react"' syntax (Fixes TS1259)
-    "isolatedModules": true, // Standard practice for Vite/Babel environments
-    "noEmit": true // Prevents TypeScript from outputting JS files (Vite handles this)
+    // 👇👇👇 FIXES FOR ALL DEPLOYMENT ERRORS 👇👇👇
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true // <--- THIS IS THE NEW FIX FOR TS5097
     // 👆👆👆 END OF FIXES 👆👆👆
   },
   "include": ["src"],
